@@ -1,5 +1,6 @@
 # Dependencies
 ## External 
+}
 - git
 - ripgrep
 
@@ -60,5 +61,5 @@ Check: Type :LspInfo to get a list of configured servers
 Info on LSP:    :h vim.lsp.buf
 
 Ident multiple lines
-:3,10< 
 :3,10>
+:3,10< 
