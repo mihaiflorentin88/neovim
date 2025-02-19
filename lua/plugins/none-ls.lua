@@ -18,7 +18,7 @@ return {
         null_ls.builtins.formatting.biome,
         null_ls.builtins.formatting.sqlfmt,
         null_ls.builtins.diagnostics.hadolint, -- Docker
-        null_ls.builtins.diagnostics.eslint,
+--        null_ls.builtins.diagnostics.eslint,
       },
     })
     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
