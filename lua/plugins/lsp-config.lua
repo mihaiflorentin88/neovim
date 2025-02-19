@@ -22,21 +22,50 @@ return {
       lspconfig.terraformls.setup({})
       lspconfig.yamlls.setup({})
       lspconfig.bashls.setup({})
-    end
+    end,
   },
   {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "pylsp", "gopls", "helm_ls", "html", "ts_ls", "lwc_ls", "jsonls", "bashls", "dockerls", "twiggy_language_server", "markdown_oxide", "phpactor", "puppet", "harper_ls", "bashls", "sqlls", "terraformls", "yamlls", "bashls"}
+        ensure_installed = {
+          "lua_ls",
+          "pylsp",
+          "gopls",
+          "helm_ls",
+          "html",
+          "ts_ls",
+          "lwc_ls",
+          "jsonls",
+          "bashls",
+          "dockerls",
+          "twiggy_language_server",
+          "markdown_oxide",
+          "phpactor",
+          "puppet",
+          "harper_ls",
+          "bashls",
+          "sqlls",
+          "terraformls",
+          "yamlls",
+          "bashls",
+        },
       })
-    end
-  }
+    end,
+  },
+  {
+    "jay-babu/mason-null-ls.nvim",
+    config = function()
+      require("mason-null-ls").setup({
+        ensure_installed = { "hadolint" },
+        automatic_installation = true,
+      })
+    end,
+  },
 }
-

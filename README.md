@@ -45,7 +45,8 @@ Space + f + g     Live grep ( search within project files ).
 <CTRL + H>        Goes to left panel
 <CTRL + L>        Goes to right panel
 
-
+# Other:
+Space + g + f     Autoformat 
 
 # Cheatsheet
 Keymaps
