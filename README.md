@@ -4,7 +4,6 @@
 - git
 - ripgrep
 
-
 # Installation
 
 ## Everything
@@ -19,6 +18,11 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x8
     sudo rm -rf /opt/nvim; \
     sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz;\
     git clone git@github.com:mihaiflorentin88/neovim.git ~/.config/nvim
+```
+
+### Use tmux settings
+```bash
+ln -s ~/.config/nvim/tmux.conf ~/.tmux.conf
 ```
 
 ## Plugins

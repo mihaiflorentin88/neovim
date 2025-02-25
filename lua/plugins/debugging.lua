@@ -13,7 +13,13 @@ return {
     local dap = require("dap")
     local dapui = require("dapui")
     require("dap-go").setup()
-    require("dapui").setup()
+    require("dapui").setup({
+      elements = {
+        id = "console",
+        size = 20,
+        position = "bottom",
+      },
+    })
 
     -- Setup nvim-dap-virtual-text to display inline variable values
     require("nvim-dap-virtual-text").setup({
