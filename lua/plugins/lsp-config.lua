@@ -5,7 +5,7 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({capabilities = capabilities})
-      lspconfig.pylsp.setup({capabilities = capabilities})
+      lspconfig.pyright.setup({capabilities = capabilities})
       lspconfig.gopls.setup({capabilities = capabilities})
       lspconfig.helm_ls.setup({capabilities = capabilities})
       lspconfig.html.setup({capabilities = capabilities})
@@ -37,7 +37,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "pylsp",
+          "pyright",
           "gopls",
           "helm_ls",
           "html",
