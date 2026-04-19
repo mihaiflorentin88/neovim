@@ -28,6 +28,8 @@ Plugins are managed by `lazy.nvim` and configured under `lua/plugins/`.
 | `rcarriga/nvim-dap-ui` | Debugger UI. | `lua/plugins/debugging.lua` |
 | `nvim-neotest/nvim-nio` | Async dependency for DAP UI. | `lua/plugins/debugging.lua` |
 | `leoluz/nvim-dap-go` | Go debugging helpers. | `lua/plugins/debugging.lua` |
+| `mfussenegger/nvim-dap-python` | Python debugpy integration. | `lua/plugins/debugging.lua` |
+| `jay-babu/mason-nvim-dap.nvim` | Mason integration for DAP adapters. | `lua/plugins/debugging.lua` |
 | `theHamsta/nvim-dap-virtual-text` | Inline debug values. | `lua/plugins/debugging.lua` |
 | `vim-test/vim-test` | Test runner commands. | `lua/plugins/vim-test.lua` |
 | `preservim/vimux` | Send test commands to tmux. | `lua/plugins/vim-test.lua` |
@@ -65,3 +67,13 @@ harper_ls, sqlls, terraformls, yamlls
 ## Configured formatters and diagnostics
 
 `none-ls.nvim` registers formatters for Lua, Django/Jinja HTML, Python, Go, JavaScript, PHP, Tailwind/Rustywind, Biome, and SQL. It also registers `hadolint` diagnostics for Dockerfiles.
+
+## Configured debug adapters
+
+Mason DAP installs:
+
+```text
+delve, debugpy, php-debug-adapter
+```
+
+See [Debugging](debugging.md) for Go, Python, and PHP examples.

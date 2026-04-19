@@ -74,6 +74,7 @@ Existing Neovim config/data/state/cache directories are backed up before install
 - [Installation](docs/installation.md)
 - [Plugins](docs/plugins.md)
 - [Tmux](docs/tmux.md)
+- [Debugging](docs/debugging.md)
 - [Keybindings](docs/keybindings.md)
 - [Vim and Neovim Cheatsheet](docs/vim-cheatsheet.md)
 - [Troubleshooting](docs/troubleshooting.md)

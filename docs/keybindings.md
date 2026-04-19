@@ -71,6 +71,9 @@ When running inside tmux, the same `<C-h>`, `<C-j>`, `<C-k>`, and `<C-l>` keys m
 | `<leader>du` | Normal | Toggle DAP UI. |
 | `<leader>db` | Normal | Toggle breakpoint. |
 | `<leader>dc` | Normal | Continue debug session. |
+| `<leader>dC` | Normal | Run to cursor. |
+| `<leader>dr` | Normal | Toggle DAP REPL. |
+| `<leader>dq` | Normal | Terminate debug session and close DAP UI. |
 | `<F7>` | Normal | Step into. |
 | `<F8>` | Normal | Step over. |
 | `<F9>` | Normal | Step out. |

@@ -149,3 +149,33 @@ If Neovim/tmux pane navigation fails:
 2. Reload tmux with `<prefix> r`.
 3. Restart Neovim inside tmux.
 4. Test `<C-h>`, `<C-j>`, `<C-k>`, and `<C-l>` from both a Neovim split and a shell pane.
+
+## Debugger recovery
+
+Install or repair debug adapters:
+
+```vim
+:MasonInstall delve debugpy php-debug-adapter
+```
+
+Check Python debugpy:
+
+```bash
+python -m debugpy --version
+```
+
+Check Go Delve:
+
+```bash
+dlv version
+```
+
+Check PHP Xdebug:
+
+```bash
+php -m | grep -i xdebug
+```
+
+If PHP breakpoints do not hit, confirm Xdebug uses port `9003` and that Neovim is listening with the `Listen for Xdebug` configuration.
+
+See [Debugging](debugging.md) for full Go, Python, and PHP workflows.
