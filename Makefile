@@ -1,9 +1,35 @@
-mac:
-  brew install neovim && git clone git@github.com:mihaiflorentin88/neovim.git ~/.config/nvim
+SHELL := /usr/bin/env bash
 
-linux:
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz; \
-    sudo rm -rf /opt/nvim; \
-    sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz;\
-    git clone git@github.com:mihaiflorentin88/neovim.git ~/.config/nvim
+.PHONY: install-mac install-linux install-tmux-mac install-tmux-linux install-all-mac install-all-linux check scripts-check docs-check tmux-check
 
+install-mac:
+	./scripts/install-macos.sh
+
+install-linux:
+	./scripts/install-linux.sh
+
+install-tmux-mac:
+	./scripts/install-tmux-macos.sh
+
+install-tmux-linux:
+	./scripts/install-tmux-linux.sh
+
+install-all-mac:
+	./scripts/install-all-macos.sh
+
+install-all-linux:
+	./scripts/install-all-linux.sh
+
+scripts-check:
+	bash -n scripts/*.sh
+	if command -v shellcheck >/dev/null 2>&1; then shellcheck scripts/*.sh; else echo "shellcheck not installed, skipping"; fi
+
+docs-check:
+	bash tests/install_docs_test.sh
+
+tmux-check:
+	tmux -f tmux.conf start-server \; source-file tmux.conf \; display-message "tmux config loaded" \; kill-server
+
+check: scripts-check docs-check
+	nvim --headless README.md "+qa"
+	nvim --headless "+checkhealth lazy" "+qa"
